@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacific Purgatory</title>
     <script src="/scripts/pp.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>What does PP say?</h1>
     <select id="characterDropdown">
         <option value="" disabled selected>Select a character</option>
         <option value="verti">Verti</option>
@@ -50,16 +56,14 @@
         const characterMessage = document.getElementById("characterMessage");
         const jellyVideo = document.getElementById("jellyVideo");
 
-    // Event listener for when the dropdown selection changes
     characterDropdown.addEventListener("change", function() {
       const selectedCharacter = characterDropdown.value;
       characterMessage.textContent = playerMessages[selectedCharacter] || "Select a character to hear their message.";
       
-      // Show the YouTube video only if "Jelly" is selected
       if (selectedCharacter === "jelly") {
         jellyVideo.style.display = "block";
       } else {
-        jellyVideo.style.display = "none";  // Hide the video for other characters
+        jellyVideo.style.display = "none";
       }
     });
       </script>
