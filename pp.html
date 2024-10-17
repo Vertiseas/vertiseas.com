@@ -5,67 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacific Purgatory</title>
     <script src="/scripts/pp.js"></script>
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="/style/pp.css">
 </head>
 <body>
-    <h1>What does PP say?</h1>
-    <select id="characterDropdown">
-        <option value="" disabled selected>Select a character</option>
-        <option value="verti">Verti</option>
-        <option value="mier">Mier</option>
-        <option value="floo">Floo</option>
-        <option value="abri">Abri</option>
-        <option value="partack">Partack</option>
-        <option value="genki">Genki</option>
-        <option value="jelly">Jelly</option>
-        <option value="jett">Jett</option>
-        <option value="yobu">Yobu</option>
-        <option value="lance">Lance</option>
-      </select>
 
-      <p id="characterMessage"></p>
-
-      <div id="jellyVideo" style="display:none;">
-        <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/PdiaDpYlNiM?autoplay=0" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-        </iframe>
-
-      <script>
-        const playerMessages = {
-          verti: "Verti says: 'You picked the main character! The best one!'",
-          mier: "Mier says: 'meowmeowmeow'",
-          floo: "Floo says: 'What's 400 + 400?... Love.'",
-          abri: "Abri says: 'I am a fish and I love feet.'",
-          partack: "Partack says: 'My name is Partack and I am building a van.'",
-          genki: "Genki says: 'plenk ton'",
-          jelly: "Jelly says:",
-          jett: "Jett says: 'Where are my bells?'",
-          yobu: "Yobu says: 'HELL YEAH!'",
-          lance: "Lance says: *muffled sounds*"
-        };
-    
-        const characterDropdown = document.getElementById("characterDropdown");
-        const characterMessage = document.getElementById("characterMessage");
-        const jellyVideo = document.getElementById("jellyVideo");
-
-    characterDropdown.addEventListener("change", function() {
-      const selectedCharacter = characterDropdown.value;
-      characterMessage.textContent = playerMessages[selectedCharacter] || "Select a character to hear their message.";
-      
-      if (selectedCharacter === "jelly") {
-        jellyVideo.style.display = "block";
-      } else {
-        jellyVideo.style.display = "none";
-      }
-    });
-      </script>
 </body>
 </html>
