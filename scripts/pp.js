@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Create a new audio element for each click
-        const audioPlayer = new Audio('https://github.com/Vertiseas/vertiseas.com/raw/refs/heads/main/media/baby-laughing-meme.mp3');
+        const audioPlayer = new Audio('media/baby-laughing-meme.mp3');
 
         // Add error handling if needed
         audioPlayer.addEventListener('error', (e) => {
