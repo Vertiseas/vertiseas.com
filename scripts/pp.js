@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Create a new audio element for each click
-        const audioPlayer = new Audio('media/baby-laughing-meme.mp3');
+        const audioPlayer = new Audio('media/baby-laughing-meme.wav');
 
         // Add error handling if needed
         audioPlayer.addEventListener('error', (e) => {
