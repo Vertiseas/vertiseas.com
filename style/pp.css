@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.contMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+@keyframes title-h1 {
+    0% {color: rgb(12, 0, 187); font-size: 0em; transform: scale3d(1, 1, 1);}
+    30% {transform: scale3d(1.25, 0.75, 1)}
+    40% {transform: scale3d(0.75, 1.25, 1)}
+    50% {color: rgb(0, 17, 255); transform: scale3d(1.15, 0.85, 1)}
+    60% {transform: scale3d(0.95, 1.05, 1)}
+    75% {transform: scale3d(1.05, 0.95, 1)}
+    100% {color: rgb(0, 162, 255); font-size: 3em; transform: scale3d(1, 1, 1);}
+}
+@keyframes title-opacity {
+    0% {opacity: 0;}
+    100% {opacity: 100%;}
+}
+.contTitle {
+    font-family: "Comic Neue", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: title-opacity;
+    animation-delay: 6s;
+    animation-duration: 4s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+.contTitle h1 {
+    paint-order: stroke fill;
+    animation-name: title-h1;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.contTitle h2 {
+    opacity: 0;
+    animation-name: title-opacity;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
